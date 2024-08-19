@@ -9,7 +9,6 @@ import addtodo from '../Components/Images/to-do-list.png'
 import showtodo from '../Components/Images/juggle.png'
 
 
-
 const { Sider } = Layout;
 
 type NavigationMappingType = {

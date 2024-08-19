@@ -11,8 +11,8 @@ interface CreateInter {
 }
 
 const CreateTodo = () => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const [Activity, setActivity] = useState("");
   const [DateToComplete, setDateToComplete] = useState("")
   // const [visible, setVisible] = useState(false);

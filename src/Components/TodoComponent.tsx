@@ -17,6 +17,10 @@ const TodoComponent = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [pagination, setPagination] = useState({ current: 1, pageSize: 10, total: 0 });
 
+  useEffect(() => {
+    showAll();
+  }, []);
+
   const showAll = (page: number = 1) => {
     setLoading(true);
     axios.post("http://localhost:5566/todo/readAll", { page })
@@ -32,10 +36,6 @@ const TodoComponent = () => {
         setLoading(false);
       });
   };
-
-  useEffect(() => {
-    showAll();
-  }, []);
 
   const handleOk = (formData: any) => {
     const reqBody = { Activity: formData.Activity, DateToComplete: formData.DateToComplete };
