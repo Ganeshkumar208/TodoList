@@ -57,6 +57,7 @@ const CreateTodo = () => {
         setActivity('');
         setDateToComplete('');
         navigate('/showAll');
+
       })
       .catch((error) => {
         console.log('error occured', error);
